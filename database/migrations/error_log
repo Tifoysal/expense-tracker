@@ -1,0 +1,156 @@
+[23-Mar-2023 20:41:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2014_05_19_083756_create_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2014_05_19_083756_create_roles_table.php on line 7
+[23-Mar-2023 20:41:57 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2014_10_12_000000_create_users_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[23-Mar-2023 20:42:00 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2014_10_12_100000_create_password_resets_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[23-Mar-2023 20:42:03 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2018_12_23_120000_create_shoppingcart_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2018_12_23_120000_create_shoppingcart_table.php on line 7
+[23-Mar-2023 20:42:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2019_08_19_000000_create_failed_jobs_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2019_08_19_000000_create_failed_jobs_table.php on line 7
+[23-Mar-2023 20:42:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2019_11_27_040657_create_divisions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2019_11_27_040657_create_divisions_table.php on line 7
+[23-Mar-2023 20:42:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2019_11_27_040723_create_districts_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2019_11_27_040723_create_districts_table.php on line 7
+[23-Mar-2023 20:42:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2019_11_27_040803_create_upazilas_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2019_11_27_040803_create_upazilas_table.php on line 7
+[23-Mar-2023 20:42:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php on line 7
+[23-Mar-2023 20:42:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2020_05_19_085153_create_modules_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2020_05_19_085153_create_modules_table.php on line 7
+[23-Mar-2023 20:42:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2021_09_13_035432_create_unions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2021_09_13_035432_create_unions_table.php on line 7
+[23-Mar-2023 20:42:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2022_05_19_083825_create_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2022_05_19_083825_create_permissions_table.php on line 7
+[23-Mar-2023 20:42:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2022_05_19_083845_create_role_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2022_05_19_083845_create_role_permissions_table.php on line 7
+[23-Mar-2023 20:42:42 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2022_06_07_051738_create_settings_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2022_06_07_051738_create_settings_table.php on line 7
+[23-Mar-2023 20:42:44 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_22_114147_create_categories_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_22_114147_create_categories_table.php on line 7
+[23-Mar-2023 20:42:48 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_22_115039_create_brands_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_22_115039_create_brands_table.php on line 7
+[23-Mar-2023 20:42:51 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_22_115534_create_types_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_22_115534_create_types_table.php on line 7
+[23-Mar-2023 20:42:55 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_23_053900_create_products_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_23_053900_create_products_table.php on line 7
+[23-Mar-2023 20:42:59 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_23_053908_create_orders_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_23_053908_create_orders_table.php on line 7
+[23-Mar-2023 20:43:03 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_23_055114_create_order_details_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_23_055114_create_order_details_table.php on line 7
+[23-Mar-2023 20:43:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_26_071755_create_banners_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_26_071755_create_banners_table.php on line 7
+[23-Mar-2023 20:43:18 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_27_051048_create_vendors_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_02_27_051048_create_vendors_table.php on line 7
+[23-Mar-2023 20:43:22 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_04_180427_create_customers_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_04_180427_create_customers_table.php on line 7
+[23-Mar-2023 20:43:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_04_180436_create_purchases_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_04_180436_create_purchases_table.php on line 7
+[23-Mar-2023 20:43:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_04_180456_create_purchase_details_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_04_180456_create_purchase_details_table.php on line 7
+[23-Mar-2023 20:43:35 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_04_181407_create_employee_dealers_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_04_181407_create_employee_dealers_table.php on line 7
+[23-Mar-2023 20:43:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_04_183904_create_dealer_purchases_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_04_183904_create_dealer_purchases_table.php on line 7
+[23-Mar-2023 20:43:42 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_04_183924_create_dealer_purchase_details_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_04_183924_create_dealer_purchase_details_table.php on line 7
+[23-Mar-2023 20:43:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_06_091908_create_purchase_receives.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_06_091908_create_purchase_receives.php on line 7
+[23-Mar-2023 20:43:49 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_12_113128_create_campaigns_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_12_113128_create_campaigns_table.php on line 7
+[23-Mar-2023 20:43:52 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_12_113336_create_product_variations_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_12_113336_create_product_variations_table.php on line 7
+[23-Mar-2023 20:43:55 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_12_113418_create_cupons_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_12_113418_create_cupons_table.php on line 7
+[23-Mar-2023 20:43:59 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_12_113426_create_product_images_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_12_113426_create_product_images_table.php on line 7
+[23-Mar-2023 20:44:02 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_13_101633_create_employee_checkings_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_13_101633_create_employee_checkings_table.php on line 7
+[23-Mar-2023 20:44:07 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_14_163620_create_sliders_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_14_163620_create_sliders_table.php on line 7
+[23-Mar-2023 20:44:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_14_174308_create_customer_addresses_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_14_174308_create_customer_addresses_table.php on line 7
+[23-Mar-2023 20:44:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_15_045641_create_dealer_purchase_receives_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_15_045641_create_dealer_purchase_receives_table.php on line 7
+[23-Mar-2023 20:44:19 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_16_050029_create_dealer_stocks_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_16_050029_create_dealer_stocks_table.php on line 7
+[23-Mar-2023 20:44:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_16_180529_create_stocks_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/migrations/2023_03_16_180529_create_stocks_table.php on line 7

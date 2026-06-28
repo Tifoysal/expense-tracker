@@ -1,0 +1,4 @@
+[23-Mar-2023 20:41:46 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Eloquent\Factories\Factory" not found in /home/kodeeone/public_html/belmoor-backend/database/factories/UserFactory.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/database/factories/UserFactory.php on line 11

@@ -1,0 +1,4 @@
+[23-Mar-2023 19:48:50 UTC] PHP Fatal error:  Uncaught Error: Class "Tests\TestCase" not found in /home/kodeeone/public_html/belmoor-backend/tests/Feature/ExampleTest.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/tests/Feature/ExampleTest.php on line 8

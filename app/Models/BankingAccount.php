@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class BankingAccount extends Model
+{
+    use HasFactory;
+
+    protected $guarded = [];
+
+    public function details()
+    {
+        return $this->hasMany(ExpenseDetail::class);
+    }
+
+    public function deposits() {
+        return $this->hasMany(Deposit::class);
+    }
+}

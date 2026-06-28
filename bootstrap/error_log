@@ -1,0 +1,4 @@
+[23-Mar-2023 14:10:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/kodeeone/public_html/belmoor-backend/bootstrap/app.php:14
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/bootstrap/app.php on line 14

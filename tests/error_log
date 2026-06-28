@@ -1,0 +1,4 @@
+[23-Mar-2023 14:12:35 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Testing\TestCase" not found in /home/kodeeone/public_html/belmoor-backend/tests/TestCase.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/tests/TestCase.php on line 7

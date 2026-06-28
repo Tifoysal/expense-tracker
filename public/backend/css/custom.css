@@ -1,0 +1,62 @@
+.w-fit{
+    width: fit-content;
+}
+
+.sidebar-parent-menu{
+    cursor: pointer;
+}
+
+.child-menu-div {
+    display: none;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.dataTable tbody tr:hover {
+    background-color: #f9fafb; /* Tailwind's gray-50 */
+}
+
+.dataTables_wrapper .dataTables_length{
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.dataTables_wrapper .dataTables_info{
+    padding-left: 8px;
+}
+
+table.dataTable>thead>tr>th{
+    font-size: 14px;
+    padding: 12px;
+    border-top: 1px solid #cfcfcf
+}
+
+.swal2-confirm.swal2-styled{
+    background-color: #4f46e5; /* Tailwind's indigo-700 */
+    color: white;
+}
+.swal2-cancel.swal2-styled{
+    background-color: #e5e7eb; /* Tailwind's gray-200 */
+    color: black;
+}
+.swal2-confirm.swal2-styled:hover{
+    background-color: #4338ca; /* Tailwind's indigo-800 */
+}
+.swal2-cancel.swal2-styled:hover{
+    background-color: #d1d5db; /* Tailwind's gray-300 */
+}
+.select2-selection.select2-selection--single{
+    min-height: 38px !important;
+    padding-top: 3px;
+}
+.select2-container{
+    width: 100% !important;
+}
+.select2-container--default .select2-selection--single{
+    color: black !important;
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 8px
+}

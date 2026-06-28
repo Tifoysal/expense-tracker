@@ -1,0 +1,16 @@
+[23-Mar-2023 14:12:02 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/kodeeone/public_html/belmoor-backend/routes/api.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/routes/api.php on line 16
+[23-Mar-2023 14:12:04 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Broadcast" not found in /home/kodeeone/public_html/belmoor-backend/routes/channels.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/routes/channels.php on line 16
+[23-Mar-2023 14:12:06 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Artisan" not found in /home/kodeeone/public_html/belmoor-backend/routes/console.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/routes/console.php on line 17
+[23-Mar-2023 14:12:08 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Support\Facades\Route" not found in /home/kodeeone/public_html/belmoor-backend/routes/web.php:45
+Stack trace:
+#0 {main}
+  thrown in /home/kodeeone/public_html/belmoor-backend/routes/web.php on line 45
