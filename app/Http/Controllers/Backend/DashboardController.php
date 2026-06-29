@@ -32,28 +32,20 @@ class DashboardController extends Controller
 
         // 2. Aggregate Metrics
         $historicalTotalExpense = ExpenseDetail::sum('amount');
+    
+        $startOfMonth = Carbon::now()->startOfMonth();
+        $endOfMonth   = Carbon::now()->endOfMonth();
         
-        $thisMonthTotalExpense = ExpenseDetail::whereHas('expense', function ($query) {
-            $query->whereMonth('created_at', Carbon::now()->month)
-                  ->whereYear('created_at', Carbon::now()->year);
-        })->sum('amount');
+        $thisMonthTotalExpense = ExpenseDetail::whereBetween('created_at', [$startOfMonth, $endOfMonth])
+            ->sum('amount');
 
-
-        // 3. Current Month's Itemized Log Entries
-        $thisMonthExpenses = ExpenseDetail::with('expense')
-            ->whereHas('expense', function ($query) {
-                $query->whereMonth('created_at', Carbon::now()->month)
-                      ->whereYear('created_at', Carbon::now()->year);
-            })
-            ->orderBy('id', 'desc')
-            ->get();
+       
 
         return view('backend.dashboard.index', compact(
             'accounts', 
             'totalPoolBalance', 
             'historicalTotalExpense', 
-            'thisMonthTotalExpense', 
-            'thisMonthExpenses'
+            'thisMonthTotalExpense'
         ));
     }
 

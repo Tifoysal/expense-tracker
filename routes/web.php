@@ -30,6 +30,7 @@ use App\Http\Controllers\Backend\ReportsController;
 |
  */
 
+ Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/login/post', [LoginController::class, 'loginPost'])->name('login.post');
 
@@ -40,7 +41,6 @@ Route::get('/reset-password/{token}', [ForgetPasswordController::class, 'resetPa
 Route::post('/reset-password/{token}', [ForgetPasswordController::class, 'resetPasswordPost'])->name('admin.reset.password.post');
 
 Route::group(['middleware' => ['auth:web,customers']], function () {
-    Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::group(['prefix' => 'admin'], function () {
         Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
     });

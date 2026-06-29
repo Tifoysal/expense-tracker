@@ -121,9 +121,8 @@ class BankingAccountController extends Controller
                 $validator = Validator::make(
                     $request->all(),
                     [
-                        'type' => 'required',
                         'name' => 'required|max:255',
-                        'starting_balance' => 'required',
+                        'balance' => 'required',
                     ]
                 );
 
@@ -140,16 +139,11 @@ class BankingAccountController extends Controller
                 }
 
                 $account->update([
-                    'type' => $request->type,
+                   
                     'name' => $request->name,
-                    'account_no' => $request->account_no,
-                    'currency' => $request->currency,
-                    'starting_balance' => $request->starting_balance,
-                    'balance' => $request->starting_balance,
-                    'default_account' => $request->default_account,
-                    'bank_name' => $request->bank_name,
-                    'bank_phone' => $request->bank_phone,
-                    'bank_address' => $request->bank_address,
+                   
+                    'balance' => $request->balance,
+                    
                 ]);
 
                 DB::commit();

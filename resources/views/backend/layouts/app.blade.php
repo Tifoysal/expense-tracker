@@ -124,7 +124,9 @@
 
 
         <!-- Static sidebar for desktop -->
+        @auth
         @includeIf('backend.partials.sidebar')
+        @endauth
         <div class="flex flex-col w-0 flex-1 overflow-hidden">
             <div class="no-print">
                 <div class="md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3">
@@ -152,8 +154,7 @@
                             <div class="flex items-center flex-shrink-0 px-4">
                                 <img class="border border-black h-8 rounded-full w-auto"
                                     src="{{ asset('backend/images/avatar.png') }}" alt="admin">
-                                <!-- <a href="{{ route('user.profile', auth()->user()->id) }}"><span
-                                    class=" font-semibold ml-3 inline-block">{{ auth()->user()->full_name }}</span></a> -->
+                               
                             </div>
                             <div class="hidden">
 
@@ -182,8 +183,8 @@
                                     <li>
                                         <span class="font-bold capitalize m-2">hello !</span>
 
-                                        <p class="p-2.5"> {{ auth()->user()->name }}
-                                            <span class="text-sm bg-blue-200 text-blue-800 rounded-xl p-1"> {{ auth()->user()->role->name }}</span>
+                                        <p class="p-2.5"> {{ auth()->user()->name?? 'guest' }}
+                                            <span class="text-sm bg-blue-200 text-blue-800 rounded-xl p-1"> {{ auth()->user()->role->name??'guest' }}</span>
                                         </p>
 
                                     </li>
@@ -203,7 +204,7 @@
 
               flex justify-start
             "
-                                            href="{{ route('user.profile', auth()->user()->id) }}">
+                                            href="{{ route('user.profile', auth()->user()->id??1) }}">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3 h-6 w-6" fill="none"
                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                                 <path stroke-linecap="round" stroke-linejoin="round"

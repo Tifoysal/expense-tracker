@@ -88,7 +88,7 @@
             </h3>
 
             <p class="text-4xl font-extrabold mt-3 text-slate-900">
-                {{ number_format($historicalTotalExpense,2) }}
+                {{ number_format($historicalTotalExpense/3,2) }}
                 <span class="text-lg text-slate-400">৳</span>
             </p>
 
@@ -150,92 +150,6 @@
             @endforeach
 
         </div>
-
-    </div>
-
-    <!-- TABLE -->
-    <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-
-        <div class="px-6 py-4 border-b bg-slate-50 flex justify-between">
-
-            <h3 class="font-bold text-slate-700">
-                চলতি মাসের ব্যয়ের তালিকা
-            </h3>
-
-            <span class="text-xs text-slate-500">
-                চলতি মাস
-            </span>
-
-        </div>
-
-        <table class="w-full">
-
-            <thead>
-
-                <tr class="bg-slate-50 text-xs uppercase text-slate-500">
-
-                    <th class="p-4 text-left">তারিখ</th>
-                    <th class="p-4 text-left">বিবরণ</th>
-                    <th class="p-4 text-left">ধরণ</th>
-                    <th class="p-4 text-left">দায়িত্বপ্রাপ্ত</th>
-                    <th class="p-4 text-right">মোট ব্যয়</th>
-                    <th class="p-4 text-right">প্রতি সদস্য (১/৩)</th>
-
-                </tr>
-
-            </thead>
-
-            <tbody class="divide-y">
-
-                @forelse($thisMonthExpenses as $item)
-
-                <tr>
-
-                    <td class="p-4">
-                        {{ $item->expense->mamla_date }}
-                    </td>
-
-                    <td class="p-4">
-                        {{ $item->title }}
-                    </td>
-
-                    <td class="p-4">
-
-                        <span class="bg-slate-100 px-2 py-1 rounded text-xs">
-                            {{ $item->type }}
-                        </span>
-
-                    </td>
-
-                    <td class="p-4">
-                        {{ $item->representative }}
-                    </td>
-
-                    <td class="p-4 text-right font-semibold">
-                        {{ number_format($item->total_amount,2) }} ৳
-                    </td>
-
-                    <td class="p-4 text-right font-bold text-rose-600">
-                        {{ number_format($item->split_amount,2) }} ৳
-                    </td>
-
-                </tr>
-
-                @empty
-
-                <tr>
-
-                    <td colspan="6" class="p-10 text-center text-slate-500">
-                        এই মাসে কোনো ব্যয়ের তথ্য পাওয়া যায়নি।
-                    </td>
-
-                </tr>
-
-                @endforelse
-
-            </tbody>
-
-        </table>
 
     </div>
 
