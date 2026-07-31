@@ -5,7 +5,8 @@
             <!-- Logo Section -->
             <a href="{{ route('admin.dashboard') }}">
                 <div class="flex items-center flex-shrink-0 px-4">
-                    <img class="w-auto rounded-full h-15" src="{{ $settings->logo }}" alt="logo" />
+                    <!-- <img class="w-auto rounded-full h-15" src="{{ $settings->logo }}" alt="logo" /> -->
+                    <img class="w-auto rounded-full h-15" src="{{ url('logo.png') }}" alt="logo" />
                 </div>
             </a>
 
