@@ -7,7 +7,6 @@
     "require": {
         "php": "^8.0.2",
         "barryvdh/laravel-dompdf": "^3.1",
-        "brandmyth/bangla-mpdf": "^0.1.0",
         "bumbummen99/shoppingcart": "^4.2",
         "devfaysal/laravel-bangladesh-geocode": "^2.0",
         "devfaysal/laravel-muthofun-sms": "^1.0",

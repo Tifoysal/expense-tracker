@@ -31,31 +31,45 @@
             <h2 class="text-lg font-bold text-gray-800">All Expenses Ledger</h2>
             <a href="{{ route('expenses.create') }}" class="bg-blue-600 text-white px-4 py-2 rounded text-sm shadow hover:bg-blue-700">Add New Entry</a>
         </div>
-        <table class="w-full text-left border-collapse">
-            <thead>
-                <tr class="bg-gray-50 text-gray-600 text-xs uppercase font-semibold border-b border-gray-200">
-                    <th class="px-6 py-3">Mamla Date</th>
-                    <th class="px-6 py-3">Title</th>
-                    <th class="px-6 py-3">Category</th>
-                   
-                    <th class="px-6 py-3 text-right">Amount</th>
-                </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-200 text-sm text-gray-700">
-                @forelse($expenses as $detail)
-                <tr>
-                    <td class="px-6 py-4 font-semibold">{{ $detail->expense->mamla_date }}</td>
-                    <td class="px-6 py-4">{{ $detail->title }}</td>
-                    <td class="px-6 py-4"><span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">{{ $detail->expenseCategory->name }}</span></td>
-                    <td class="px-6 py-4 text-right font-bold text-red-600">{{ number_format($detail->amount, 2) }} BDT</td>
-                </tr>
-                @empty
-                <tr>
-                    <td colspan="6" class="px-6 py-8 text-center text-gray-400">No matching expense statements located.</td>
-                </tr>
-                @endforelse
-            </tbody>
-        </table>
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-gray-50 text-gray-600 text-xs uppercase font-semibold border-b border-gray-200">
+                        <th class="px-6 py-3">Mamla Date</th>
+                        <th class="px-6 py-3">Title</th>
+                        <th class="px-6 py-3">Category</th>
+                        <th class="px-6 py-3 text-right">Amount</th>
+                        <th class="px-6 py-3 text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200 text-sm text-gray-700">
+                    @forelse($expenses as $detail)
+                    <tr>
+                        <td class="px-6 py-4 font-semibold whitespace-nowrap">{{ optional($detail->expense)->mamla_date ?? '-' }}</td>
+                        <td class="px-6 py-4">{{ $detail->title }}</td>
+                        <td class="px-6 py-4">
+                            @if($detail->expenseCategory)
+                                <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">{{ $detail->expenseCategory->name }}</span>
+                            @else
+                                <span class="text-gray-400 text-xs">N/A</span>
+                            @endif
+                        </td>
+                        <td class="px-6 py-4 text-right font-bold text-red-600 whitespace-nowrap">{{ number_format($detail->amount, 2) }} BDT</td>
+                        <td class="px-6 py-4 text-center">
+                            <a href="{{ route('expenses.edit', $detail->id) }}"
+                                class="inline-flex items-center gap-1 bg-amber-500 hover:bg-amber-600 text-white px-3 py-1.5 rounded text-xs font-medium shadow-sm">
+                                Edit
+                            </a>
+                        </td>
+                    </tr>
+                    @empty
+                    <tr>
+                        <td colspan="5" class="px-6 py-8 text-center text-gray-400">No matching expense statements located.</td>
+                    </tr>
+                    @endforelse
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 @endsection

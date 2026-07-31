@@ -153,6 +153,98 @@
 
     </div>
 
+    <!-- EXPENSE HISTORY (filter + table) -->
+    <div>
+
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-3">
+            <h2 class="text-xs font-bold uppercase text-slate-400 tracking-wider">
+                ব্যয়ের ইতিহাস
+            </h2>
+
+            <form method="GET" action="{{ route('admin.dashboard') }}" class="flex flex-wrap items-end gap-3">
+                <div>
+                    <label class="block text-[10px] font-semibold uppercase text-slate-400 mb-1">Month</label>
+                    <select name="month" class="p-2 border border-gray-300 rounded text-sm bg-white">
+                        @foreach($months as $num => $name)
+                            <option value="{{ $num }}" {{ (int) $filterMonth === $num ? 'selected' : '' }}>{{ $name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-[10px] font-semibold uppercase text-slate-400 mb-1">Year</label>
+                    <select name="year" class="p-2 border border-gray-300 rounded text-sm bg-white">
+                        @foreach($availableYears as $y)
+                            <option value="{{ $y }}" {{ (int) $filterYear === (int) $y ? 'selected' : '' }}>{{ $y }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <button type="submit" class="bg-slate-800 text-white px-4 py-2 rounded text-sm font-medium hover:bg-slate-900 shadow">
+                    Filter
+                </button>
+                <a href="{{ route('admin.dashboard') }}" class="bg-gray-200 text-gray-700 px-4 py-2 rounded text-sm text-center hover:bg-gray-300">
+                    Reset
+                </a>
+            </form>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-50 text-slate-500 text-xs uppercase font-semibold border-b border-gray-200">
+                            <th class="px-6 py-3">Mamla Date</th>
+                            <th class="px-6 py-3">Title</th>
+                            <th class="px-6 py-3">Category</th>
+                            <th class="px-6 py-3 text-right">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 text-sm text-slate-700">
+                        @forelse($expenseHistory as $detail)
+                            <tr>
+                                <td class="px-6 py-4 font-semibold whitespace-nowrap">
+                                    @if(optional($detail->expense)->mamla_date)
+                                        {{ \Carbon\Carbon::parse($detail->expense->mamla_date)->format('d M Y') }}
+                                    @else
+                                        -
+                                    @endif
+                                </td>
+                                <td class="px-6 py-4">{{ $detail->title }}</td>
+                                <td class="px-6 py-4">
+                                    @if($detail->expenseCategory)
+                                        <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-xs">{{ $detail->expenseCategory->name }}</span>
+                                    @else
+                                        <span class="text-slate-400 text-xs">N/A</span>
+                                    @endif
+                                </td>
+                                <td class="px-6 py-4 text-right font-bold text-rose-600 whitespace-nowrap">
+                                    {{ number_format($detail->amount, 2) }} ৳
+                                </td>
+                            </tr>
+                        @empty
+                            <tr>
+                                <td colspan="4" class="px-6 py-8 text-center text-slate-400">
+                                    No expenses found for {{ $months[$filterMonth] ?? '' }} {{ $filterYear }}.
+                                </td>
+                            </tr>
+                        @endforelse
+                    </tbody>
+                    @if($expenseHistory->isNotEmpty())
+                        <tfoot>
+                            <tr class="bg-slate-50 border-t border-gray-200">
+                                <td colspan="3" class="px-6 py-3 text-right text-xs font-bold uppercase text-slate-500">
+                                    Total ({{ $months[$filterMonth] ?? '' }} {{ $filterYear }})
+                                </td>
+                                <td class="px-6 py-3 text-right font-bold text-rose-600">
+                                    {{ number_format($thisMonthTotalExpense, 2) }} ৳
+                                </td>
+                            </tr>
+                        </tfoot>
+                    @endif
+                </table>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 @endsection

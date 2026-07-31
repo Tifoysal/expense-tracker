@@ -93,6 +93,7 @@ Route::group(['middleware' => ['auth:web,customers']], function () {
         Route::post('store', [ExpenseController::class, 'store'])->name('expenses.store');
         Route::get('show/{id}', [ExpenseController::class, 'show'])->name('expenses.show');
         Route::get('view/{id}', [ExpenseController::class, 'view'])->name('expenses.view');
+        Route::get('edit/{id}', [ExpenseController::class, 'edit'])->name('expenses.edit');
         Route::get('/expense/slip/pdf/{expense}/{date}', [ExpenseController::class, 'downloadPdf'])->name('expenses.slip.pdf');
         Route::post('update/{id}', [ExpenseController::class, 'update'])->name('expenses.update');
         Route::get('destroy/{id}', [ExpenseController::class, 'destroy'])->name('expenses.destroy');

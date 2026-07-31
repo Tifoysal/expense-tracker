@@ -504,4 +504,73 @@ class ExpenseController extends Controller
             return redirect()->back();
         }
     }
+
+    /**
+     * Show the form to edit a single expense line item (ExpenseDetail).
+     */
+    public function edit($id)
+    {
+        $detail = ExpenseDetail::with(['expense', 'expenseCategory'])->findOrFail($id);
+        $types  = ExpenseCategory::all();
+
+        return view('backend.expenses.edit', compact('detail', 'types'));
+    }
+
+    /**
+     * Update a single expense line item (ExpenseDetail) and keep the
+     * 3-way split accounting consistent.
+     *
+     * Accounting logic:
+     *  - Each ExpenseDetail's amount is split evenly across all banking accounts
+     *    (amount / 3) at creation time.
+     *  - On update, the per-account adjustment is:
+     *        (newAmount - oldAmount) / 3
+     *    which is applied to every banking account.
+     *    - If positive  → accounts decrease (more expense)
+     *    - If negative  → accounts increase  (less expense, refund)
+     */
+    public function update(Request $request, $id)
+    {
+        $validated = $request->validate([
+            'title'      => 'required|string|max:255',
+            'type'       => 'required|exists:expense_categories,id',
+            'amount'     => 'required|numeric|min:0.01',
+        ]);
+
+        try {
+            DB::transaction(function () use ($request, $id, $validated) {
+                $detail = ExpenseDetail::lockForUpdate()->findOrFail($id);
+
+                $oldAmount = (float) $detail->amount;
+                $newAmount = (float) $validated['amount'];
+                $diff      = $newAmount - $oldAmount; // total difference
+
+                // Update the line item
+                $detail->update([
+                    'title'                => $validated['title'],
+                    'expense_category_id'  => $validated['type'],
+                    'amount'               => $newAmount,
+                ]);
+
+                // Maintain accounting: adjust every banking account by the split difference
+                if ($diff != 0) {
+                    $splitDiff = $diff / 3; // per account
+
+                    if ($splitDiff > 0) {
+                        // Expense increased → decrease account balances
+                        BankingAccount::query()->decrement('balance', $splitDiff);
+                    } else {
+                        // Expense decreased → increase account balances (abs of negative)
+                        BankingAccount::query()->increment('balance', abs($splitDiff));
+                    }
+                }
+            });
+
+            notify()->success('Expense updated and accounts adjusted successfully.');
+        } catch (Throwable $ex) {
+            notify()->error($ex->getMessage());
+        }
+
+        return redirect()->route('expenses.index');
+    }
 }
